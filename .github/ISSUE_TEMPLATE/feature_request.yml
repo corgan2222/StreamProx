@@ -1,0 +1,30 @@
+name: Feature request / Funktion wünschen
+description: An idea for StreamProx. / Eine Idee für StreamProx.
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like? / Was wünschst du dir?
+      placeholder: A key that shows the free space of a Proxmox storage. / Eine Taste, die den freien Platz eines Proxmox-Speichers zeigt.
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: What would you use it for? / Wofür würdest du es nutzen?
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area / Bereich
+      options:
+        - Proxmox VE
+        - Docker / Portainer
+        - ProxMenux
+        - SSH / MQTT / REST
+        - Look & profiles / Darstellung & Profile
+        - Other / Sonstiges
+  - type: textarea
+    id: extra
+    attributes:
+      label: Screenshots, sketches, links (optional)
