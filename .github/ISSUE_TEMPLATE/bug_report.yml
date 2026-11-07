@@ -1,0 +1,83 @@
+name: Bug report / Fehler melden
+description: Something does not work as expected. / Etwas funktioniert nicht wie erwartet.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time! English or German is fine. / Danke! Englisch oder Deutsch, beides ist okay.
+        Please remove passwords, API tokens and internal hostnames from logs and screenshots. / Bitte Passwörter, API-Tokens und interne Hostnamen aus Logs und Screenshots entfernen.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened? / Was ist passiert?
+      placeholder: The VM key stays grey although the VM is running. / Die VM-Taste bleibt grau, obwohl die VM läuft.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce / Schritte zum Nachstellen
+      placeholder: |
+        1. Drag "VM / Container" onto a key
+        2. Select VM 101
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behaviour / Erwartetes Verhalten
+  - type: dropdown
+    id: action
+    attributes:
+      label: Action / Aktion
+      options:
+        - Proxmox Profile / Proxmox-Profil
+        - VM / Container
+        - Cluster / Node
+        - ProxMenux Value / ProxMenux-Wert
+        - Container (Portainer)
+        - Wide Graph / Breiter Graph
+        - Task Monitor
+        - Snapshots
+        - Backup
+        - Docker via SSH / Docker über SSH
+        - SSH Command / SSH-Befehl
+        - MQTT
+        - REST API
+        - Next Page / Seite blättern
+        - Settings / Einstellungen
+        - Other / Sonstiges
+  - type: input
+    id: version
+    attributes:
+      label: StreamProx version / Version
+      description: Stream Deck → Settings → Plugins
+      placeholder: "1.2.0.0"
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Stream Deck app, device, OS / App, Gerät, Betriebssystem
+      placeholder: "Stream Deck 7.6, Stream Deck MK.2, Windows 11"
+    validations:
+      required: true
+  - type: input
+    id: servers
+    attributes:
+      label: Proxmox / Portainer / ProxMenux versions
+      placeholder: "Proxmox VE 9.2, Portainer 2.45, ProxMenux 1.2.2"
+  - type: textarea
+    id: logs
+    attributes:
+      label: Plugin log (optional)
+      description: |
+        Windows: %APPDATA%\Elgato\StreamDeck\Plugins\de.corgan.streamprox.sdPlugin\logs
+        macOS: ~/Library/Application Support/com.elgato.StreamDeck/Plugins/de.corgan.streamprox.sdPlugin/logs
+      render: text
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots (optional)
